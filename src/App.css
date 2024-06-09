@@ -1,4 +1,4 @@
-
+/* 
 .app {
   text-align: center;
 }
@@ -14,8 +14,8 @@
 
 .logo-container {
   /* display: flex; */
-  align-items: center;
-}
+  /* align-items: center; */
+/* }
 
 .logo {
   height: 50px;
@@ -25,7 +25,82 @@
 .fresh {
   font-size: 1.5em; 
   /* display: flex; */
-  margin: 0px;
+  /* margin: 0px;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+} */
+
+/* .nav-items li {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search{
+  padding: 10px;
+}
+
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.res-card{
+  width: 200px;
+  height: 300px;
+  background-color: rgb(180, 140, 180);
+  padding: 5px;
+  margin: 5px;
+}
+
+.res-card:hover{
+  border: 2px solid rgb(86, 86, 142);
+  cursor: pointer;
+}
+.res_logo{
+  width: 100%;
+} */ 
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* App layout */
+.app {
+  text-align: center;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(126, 51, 126);
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.fresh {
+  font-size: 1.8em;
+  margin: 0;
 }
 
 .nav-items ul {
@@ -37,6 +112,59 @@
 }
 
 .nav-items li {
-  font-size: 20px;
+  font-size: 1.1em;
   cursor: pointer;
+}
+
+/* Body styles */
+.search {
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: left;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.res-card {
+  width: 250px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.20);
+  cursor: pointer;
+}
+
+.res_logo {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.res-card h3, .res-card h4 {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.res-card h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.res-card h4 {
+  font-size: 1em;
+  color: #7f1d1d;
 }
