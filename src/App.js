@@ -1,15 +1,16 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
-import Header from './components/Header';
-import Body from './components/Body';
-import resData from './components/ResData';  // Correctly import resData
+import Header from './components/Header'; // Correct path
+import Body from './components/Body'; // Correct path
+import resData from './components/ResData'; // Correct path
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body resObj={resData} /> {/* Pass resData as a prop to Body */}
+      <Body resObj={resData} />
     </div>
   );
 }

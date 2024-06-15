@@ -1,78 +1,8 @@
-/* 
-.app {
-  text-align: center;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4px;
-  background-color: rgb(86, 86, 142);
-  color: white;
-}
-
-.logo-container {
-  /* display: flex; */
-  /* align-items: center; */
-/* }
-
-.logo {
-  height: 50px;
-  margin-right: 5px; 
-}
-
-.fresh {
-  font-size: 1.5em; 
-  /* display: flex; */
-  /* margin: 0px;
-}
-
-.nav-items ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-} */
-
-/* .nav-items li {
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.search{
-  padding: 10px;
-}
-
-.res-container{
-  display: flex;
-  flex-wrap: wrap;
-  
-}
-.res-card{
-  width: 200px;
-  height: 300px;
-  background-color: rgb(180, 140, 180);
-  padding: 5px;
-  margin: 5px;
-}
-
-.res-card:hover{
-  border: 2px solid rgb(86, 86, 142);
-  cursor: pointer;
-}
-.res_logo{
-  width: 100%;
-} */ 
-
-
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
 }
-
 
 .app {
   text-align: center;
@@ -116,7 +46,6 @@ body {
   cursor: pointer;
 }
 
-
 .search {
   padding: 20px;
   font-size: 1.2em;
@@ -126,11 +55,28 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.filter-btn{
-   padding: 10px;
-   height: 3px;
-   width: 75px;
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #fc8019; /* Swiggy's primary orange color */
+  color: white; /* White text color for better contrast */
+  border: none;
+  border-radius: 25px; /* More rounded corners for a modern look */
+  font-size: 16px; /* Slightly larger font size for readability */
+  font-weight: bold; /* Bold text for emphasis */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
 }
+
+.filter-btn:hover {
+  background-color: #e76e17; /* Slightly darker orange on hover */
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.filter-btn:active {
+  background-color: #d65f14; /* Even darker orange for active state */
+  transform: translateY(1px); /* Slightly lower position on click */
+}
+
 
 .res-container {
   display: flex;
@@ -172,5 +118,5 @@ body {
 
 .res-card h4 {
   font-size: 1em;
-  color: #7f1d1d;
+  color: rgb(59, 14, 14);
 }
