@@ -1,4 +1,4 @@
-// Body.js
+
 import React, { useEffect, useState } from 'react';
 import Res_Card from './Res_Card';
 
@@ -7,7 +7,7 @@ const Body = () => {
   const [filteredResObj, setFilteredResObj] = useState([]);
 
   const handleFilter = () => {
-    const filtered = resObj.filter(res => res.info.avgRating > 4);
+    const filtered = resObj.filter(res => res.data.avgRating > 4);
     setFilteredResObj(filtered);
   };
 
@@ -22,9 +22,12 @@ const Body = () => {
       console.log(json);
 
       // Assuming the structure of json is known and contains the restaurants list
-      const restaurants = json.data.cards[2].data.data.cards; // Adjust based on actual JSON structure
-      setResObj(restaurants);
-      setFilteredResObj(restaurants);
+      // const restaurants = json.data.cards.find(card => card.card.card['@type'] === 'type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget')?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      const restaurants = json.data.cards[2].data.info.cards; 
+      if (restaurants) {
+        setResObj(restaurants);
+        setFilteredResObj(restaurants);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
