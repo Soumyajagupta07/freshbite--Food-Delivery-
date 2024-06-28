@@ -1,10 +1,11 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
-import Header from './components/Header'; // Correct path
-import Body from './components/Body'; // Correct path
+import Header from './components/Header'; 
+import Body from './components/Body'; 
+import About from './components/About';
 import resData from './components/ResData'; // Correct path
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const AppLayout = () => {
   return (
@@ -15,7 +16,18 @@ const AppLayout = () => {
   );
 }
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout/>,
+  },
+  {
+    path: "/about",
+    element: <About/>,
+  }
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
 
 export default AppLayout;
