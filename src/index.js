@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import About from './components/About';
 import Contact from './components/Contact';
+import ResMenu from './components/ResMenu';
 import Error from './components/Error';
 import { createBrowserRouter, RouterProvider, Route, Routes } from 'react-router-dom';
 
@@ -19,7 +20,8 @@ const appRouter = createBrowserRouter([
       children: [
         { path: "/", element: <Body />},
         { path: "/about", element: <About /> },
-        { path: "/contact", element: <Contact /> }
+        { path: "/contact", element: <Contact /> },
+        { path: "/restaurant/:resid", element: <ResMenu /> }      //: make this url dynamic for different resIds
       ],
     }
   ]);

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Shimmer from './Shimmer';
 import Res_Card from './Res_Card';
+import { Link } from 'react-router-dom';
 
 const Body = () => {
   const [resObj, setResObj] = useState([]);
@@ -36,7 +37,7 @@ const Body = () => {
         const res = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setResObj(res);
         setFilteredResObj(res);
-        console.log(resObj);
+        console.log(filteredResObj);
     
   };
 
@@ -73,7 +74,7 @@ const Body = () => {
 
       <div className="res-container">
         {filteredResObj.map((restaurant) => (
-          <Res_Card key={restaurant.info.id} resData={restaurant.info} />
+          <Link to={"/restaurant/"+restaurant.info.id}><Res_Card key={restaurant.info.id} resData={restaurant.info} /></Link>
         ))}
       </div>
     </div>
