@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./../App.css";
 import Shimmer from "./Shimmer";
 
 const ResMenu = () => {
@@ -18,17 +19,29 @@ const ResMenu = () => {
         
     }
 
-    // const {name, cuisine, avgrating, costfortwo} = resMenu.cards[2]?.card?.card?.info;
+    // const {name, cuisine, avgrating, costfortwo} = resMenu.cards[2]?.card?.card?.info;    //error for the next if statement
     console.log(resMenu);
     if(resMenu === null) return <Shimmer/>
+
+    const cardInfo = resMenu.cards?.[2]?.card?.card?.info;
+    const itemCards = resMenu.cards?.[2]?.card?.card?.itemCards || [];
+
+    if (!cardInfo) {
+        return <div>Data not available</div>;
+    }
+
+    const { name, cuisines, avgRating, costForTwo } = cardInfo;
+
     return (
         <div>
-            <h1>{resMenu?.cards[2]?.card?.card?.info?.name}</h1>
-            <h2>{resMenu?.cards[2]?.card?.card?.info?.costForTwo}</h2>
+            <h1>{name}</h1>
+            <h2>{costForTwo}</h2>
+            <h2>{cuisines?.join(', ')}</h2>
+            <h2>{avgRating}</h2>
             <ul>
-                <li>Biryani</li>
-                <li>Momo</li>
-                <li>Pizza</li>
+                {itemCards.map((item, index) => (
+                    <li key={index}>{item.card?.info?.name}</li>
+                ))}
             </ul>
         </div>
     );

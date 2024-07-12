@@ -14,7 +14,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgb(126, 51, 126);
+  /* background-color: rgb(126, 51, 126); */
+  background-color: #c56860;
   color: white;
 }
 
@@ -65,7 +66,8 @@ body {
   font-size: 1.1em;
   list-style: none;
   cursor: pointer;
-  padding: 5px 10px; /* Add padding for better click area */
+  padding: 5px 10px;
+  color: #f0f0f0;
 }
 
 .nav-items li:hover {
@@ -86,7 +88,7 @@ body {
   background-color: darkgray;
 }
 
-.search {
+/* .search {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -95,7 +97,7 @@ body {
   background-color: white;
   margin-bottom: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  gap: 10px; /* Add some space between input and button */
+  gap: 10px; /* Add some space between input and button 
 }
 
 .search-box {
@@ -121,8 +123,6 @@ body {
   background-color: #e76e17; 
 }
 
-
-
 .filter-btn {
   padding: 8px 12px;
   font-size: 16px;
@@ -130,35 +130,81 @@ body {
   margin-top: 16px;
 }
 
-
 .filter-btn {
   padding: 10px 20px;
-  background-color: #fc8019; /* Swiggy's primary orange color */
-  color: white; /* White text color for better contrast */
+  background-color: #fc8019; /* Swiggy's primary orange color 
+  color: white;  White text color for better contrast 
   border: none;
-  border-radius: 25px; /* More rounded corners for a modern look */
-  font-size: 16px; /* Slightly larger font size for readability */
-  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 25px; 
+  font-size: 16px;  
+  font-weight: bold; 
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .filter-btn:hover {
-  background-color: #e76e17; /* Slightly darker orange on hover */
-  transform: translateY(-2px); /* Subtle lift effect on hover */
+  background-color: #e76e17; 
+  transform: translateY(-2px); 
 }
 
-.filter-btn:active {
-  background-color: #d65f14; /* Even darker orange for active state */
-  transform: translateY(1px); /* Slightly lower position on click */
+/* .filter-btn:active {
+  background-color: #d65f14; /* Even darker orange for active state 
+  transform: translateY(1px); /* Slightly lower position on click 
+} */ 
+search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
+.search-box {
+  margin: 10px;
+  padding: 10px;
+  width: 700px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #ff4b3a;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #ff4b3a;
+}
 
 .res-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  
 }
 
 .res-card {
@@ -169,6 +215,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
 }
 
 .res-card:hover {
@@ -185,11 +232,13 @@ body {
 .res-card h3, .res-card h4 {
   margin: 10px 0;
   text-align: left;
+  border: none;
 }
 
 .res-card h3 {
   font-size: 1.2em;
   color: #333;
+  border-style: none;
 }
 
 .res-card h4 {
