@@ -318,3 +318,8 @@ search {
 .error-link:hover {
   background-color: #e63946;
 }
+
+.user_card{
+  padding: 10px;
+  border: 1px solid black;
+}
