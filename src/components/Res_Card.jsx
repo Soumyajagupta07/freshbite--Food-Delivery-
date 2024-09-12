@@ -1,4 +1,5 @@
 import React from 'react';
+import resData from './ResData';
 
 const Res_Card = ({ resData }) => {
   return (
@@ -11,5 +12,17 @@ const Res_Card = ({ resData }) => {
     </div>
   );
 }
+
+// Higher Order Function
+export const withPromotedLebel = (resData) => {
+  return() => {
+    return(
+      <div>
+          <label htmlFor="Promoted"></label>
+          <Res_Card/>
+      </div>
+    );
+  };
+};
 
 export default Res_Card;

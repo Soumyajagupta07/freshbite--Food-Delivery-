@@ -9,6 +9,10 @@ class UserClass extends React.Component{
             count2: 2,
         };
     }
+
+    componentDidMount(){
+        console.log('componentDidMount');
+    }
     render() {
         const {name, location} = this.props;
         const {count} = this.state;
