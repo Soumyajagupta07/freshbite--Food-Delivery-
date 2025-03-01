@@ -59,13 +59,13 @@ const ResMenu = () => {
             </p>
             <h3>Rating: {avgRating}</h3>
             {catergories.map((category, index) => (
-                <div key={index}>
-                <h4>{category?.card?.card?.title}</h4> {/* Display category title */}
-                <p>Items: {category?.card?.card?.itemCards.length}</p> {/* Display number of items in the category */}
-                
-                {/* Accordion component for category */}
-                <ResCategory data={category?.card?.card} />
-            </div>
+                <><ResCategory /><div key={index}>
+                    <h4>{category?.card?.card?.title}</h4> {/* Display category title */}
+                    <p>Items: {category?.card?.card?.itemCards.length}</p> {/* Display number of items in the category */}
+
+                    {/* Accordion component for category */}
+                    <ResCategory data={category?.card?.card} />
+                </div></>
             ))}
         </div>
     );
